@@ -10,6 +10,10 @@ app.get("/", function(req, res) {
 	res.sendFile(__dirname + "/index.html");
 });
 
+app.get("/employees", function(req, res) {
+	res.json({"name": "Peeter", "dept": "IT"});
+});
+
 app.listen(port, function() {
 	console.log("App listening on port ", port);
 });
